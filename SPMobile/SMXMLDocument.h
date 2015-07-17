@@ -24,6 +24,8 @@
 
 // SMXMLDocument is a very handy lightweight XML parser for iOS.
 
+#import <Foundation/Foundation.h>
+
 extern NSString *const SMXMLDocumentErrorDomain;
 
 @class SMXMLDocument;

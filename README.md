@@ -33,7 +33,7 @@ Authentication Delegates
       // Do something cool now we're logged in
     }
 
-    - (void)authentication: (SPOAuthentication *)didFailWithError: (NSError *)error
+    - (void)authentication: (SPOAuthentication *)authentication didFailWithError: (NSError *)error
     {
       // Do something helpful as Auth failed for some reason.
     }
@@ -44,7 +44,7 @@ Querying SharePoint (SP2013 _api example)
 -
 
     NSString* urlRequest = @"http://somesharepointsite/sites/myweb/_api/web/Title";
-    NSString* requestIdStr = @"TitleRequest"
+    NSString* requestId = @"TitleRequest"
     NSMutableString* requestMethod = @"GET"
     
     RemoteQuery* query = [[RemoteQuery alloc] initWithUrlRequestId:urlRequest id:requestId];
@@ -57,7 +57,7 @@ Querying SharePoint (SP2013 _api example)
 Querying SharePoint (SP2007/SP2010/SP2013 classic web services)
 -
     NSString* urlRequest = @"http://somesharepointsite/sites/TeamSite/_vti_bin/Lists.asmx";
-    NSString* requestIdStr = @"AllListsRequest";
+    NSString* requestId = @"AllListsRequest";
     NSMutableString* requestMethod = @"POST";
     NSString* payload = @"<<FULL SOAP PACKET OF REQUEST HERE>>";
     NSString* soapAction = @"http://schemas.microsoft.com/sharepoint/soap/GetListCollection";
